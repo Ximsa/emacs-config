@@ -10,7 +10,9 @@
 ;;; You can use Jinx inside of programming modes and it will only
 ;;; check spelling inside of strings and comments. (Configurable, of
 ;;; course.) It also supports having multiple languages (e.g. English
-;;; and German) in the same file.
+;;; and German) in the same file. Jinx requires special installation;
+;;; see the Jinx README https://github.com/minad/jinx for how to
+;;; ensure external tools are installed.
 ;;;
 ;;; Olivetti narrows the window margins so that your text is centered.
 ;;; This makes writing in a wide, dedicated window more pleasant.
@@ -37,6 +39,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Jinx: Enchanted spell-checking
+;; NOTICE: see the Jinx README https://github.com/minad/jinx for
+;; installation instructions
 (use-package jinx
   :hook (((text-mode prog-mode) . jinx-mode))
   :bind (("C-;" . jinx-correct))
