@@ -7,3 +7,10 @@
 /projects
 /transient/
 /tree-sitter/
+/places.eld
+/projects.eld
+/tramp
+/emacs-backup/
+/agent/
+/.agent-shell/
+/server/
