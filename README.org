@@ -1,3 +1,5 @@
+My adjustments ontop of https://codeberg.org/ashton314/emacs-bedrock
+
 #+title: Emacs Bedrock
 
 A foundation for a better Emacs experience
