@@ -81,6 +81,33 @@
 (save-place-mode 1)         ; reopen files where you left off
 (context-menu-mode 1)       ; right-click menu with relevant actions
  
+;;;; Project tree (treemacs) -------------------------------------------
+;; IntelliJ-style file tree on the left.
+;;   C-c t t   show / hide the tree
+;;   C-c t f   reveal the current file in the tree
+;;   M-0       jump into the tree window
+;; Inside the tree:
+;;   TAB expand/collapse   RET open   o v open in a split on the right
+;;   c f new file   c d new folder   R rename   d delete   ? all keys
+(use-package treemacs
+  :ensure t
+  :bind (("C-c t t" . treemacs)
+         ("C-c t f" . treemacs-find-file)
+         ("M-0"     . treemacs-select-window))
+  :custom
+  (treemacs-width 35)
+  (treemacs-is-never-other-window t)   ; C-x o skips the tree
+  :config
+  (treemacs-project-follow-mode 1)     ; tree shows the project you're in
+  (treemacs-follow-mode 1)             ; highlight the file you're editing
+  (treemacs-filewatch-mode 1)          ; refresh when files change on disk
+  (treemacs-git-mode 'simple))         ; Git status colors
+ 
+;; Refresh the tree's Git colors after Magit commits, stages, etc.
+(use-package treemacs-magit
+  :ensure t
+  :after (treemacs magit))
+ 
 ;;;; Jump to definition (all languages) -------------------------------
 ;; Keyboard:  M-.  go to definition      (stock)
 ;;            M-,  jump back             (stock)
