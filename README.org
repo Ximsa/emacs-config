@@ -1,4 +1,4 @@
-My adjustments ontop of https://codeberg.org/ashton314/emacs-bedrock
+My adjustments on top of https://codeberg.org/ashton314/emacs-bedrock
 
 #+title: Emacs Bedrock
 
